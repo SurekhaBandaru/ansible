@@ -1,5 +1,5 @@
 - name: pinging a server
   hosts: frontend #get from inventory
-  tasks:
+  tasks: #list of tasks
   - name: ping the server
     ansible.builtin.ping:
