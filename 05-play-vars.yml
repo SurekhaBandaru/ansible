@@ -1,0 +1,11 @@
+- name: playbook demo on variables
+  hosts: local
+  connection: local
+  vars:
+    COURSE: Ansible
+    DURATION: 15Hr
+    TRAINER: Surekha
+  tasks:
+  - name: Demonstrate variables in ansible
+    ansible.builtin.debug:
+      msg: "Hello {{ COURSE }}, Duration {{ DURATION }}, trainer is {{ TRAINER }}"
