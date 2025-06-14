@@ -9,3 +9,7 @@
   - name: Demonstrate variables in ansible
     ansible.builtin.debug:
       msg: "Hello {{ COURSE }}, Duration {{ DURATION }}, trainer is {{ TRAINER }}"
+
+  - name: Demo variables in ansible again
+    ansible.builtin.debug:
+      msg: "Hello {{ COURSE }}, Duration {{ DURATION }}, trainer is {{ TRAINER }}"
