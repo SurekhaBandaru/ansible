@@ -1,9 +1,8 @@
 - name: variables preferences
   hosts: local
   connection: local
-  vars_file:
+  vars_files:
     - course.yml
-
   vars_prompt:
   - name: Variable from prompt
     prompt: Enter the GREETING prompt
