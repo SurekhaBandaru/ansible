@@ -5,6 +5,7 @@
   - name: NUMBER
     prompt: Enter NUMBER 
     private: false
+    
   tasks:
   - name: Print if number is less than 100
     ansible.builtin.debug:
