@@ -4,6 +4,7 @@
   vars:
    COURSE: "DevSecOps with AWS"
    DURATION: 130
+   IS_LIVE: true
    TOOLS:
     - LINUX 
     - Shell
@@ -14,5 +15,5 @@
   tasks:
   - name: Datatypes Demo
     ansible.builtin.debug:
-      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, tools are: {{ TOOLS }} and the concept is {{ CONCEPT }}"
+      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, is live: {{ IS_LIVE }} tools are: {{ TOOLS }} and the concept is {{ CONCEPT }}"
   
