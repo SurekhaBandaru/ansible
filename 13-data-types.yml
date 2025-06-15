@@ -1,0 +1,18 @@
+- name: Datatypes Demonstration
+  hosts: local
+  connection: local
+  vars:
+   COURSE: "DevSecOps with AWS"
+   DURATION: 130
+   TOOLS:
+    - LINUX 
+    - Shell
+    - Ansible
+   CONCEPT:
+    CI: Jenkins
+    SCRIPTING: "Shell, Ansible, Terraform, Python"
+  tasks:
+  - name: Datatypes Demo
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, tools are: {{ TOOLS }} and the concept is {{ CONCEPT }}"
+  
