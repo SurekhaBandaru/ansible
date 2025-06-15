@@ -2,16 +2,16 @@
   hosts: local
   connection: local
   vars_prompt:
-    - name: Conditions check
-      prompt: Enter NUMBER 
-      private: false
+  - name: NUMBER
+    prompt: Enter NUMBER 
+    private: false
   tasks:
-    - name: Print if number is less than 100
-      ansible.builtin.debug:
-        msg: "Given number {{ NUMBER }} is less than 100"
-      when: NUMBER < 100
+  - name: Print if number is less than 100
+    ansible.builtin.debug:
+      msg: "Given number {{ NUMBER }} is less than 100"
+    when: NUMBER < 100
 
-    - name: Print if number is greater than 100
-      ansible.builtin.debug:
-        msg: "Given number {{ NUMBER }} is greater than 100"
-      when: NUMBER > 100
+  - name: Print if number is greater than 100
+    ansible.builtin.debug:
+      msg: "Given number {{ NUMBER }} is greater than 100"
+    when: NUMBER > 100
