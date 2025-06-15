@@ -2,14 +2,14 @@
   hosts: local
   connection: local
   vars:
-   COURSE: "DevSecOps with AWS"
-   DURATION: 130
-   IS_LIVE: true
-   TOOLS:
+   COURSE: "DevSecOps with AWS" #String
+   DURATION: 130 #number
+   IS_LIVE: true #boolean
+   TOOLS: #List []
     - LINUX 
     - Shell
     - Ansible
-   CONCEPT:
+   CONCEPT: #map/dictionary/object
     CI: Jenkins
     SCRIPTING: "Shell, Ansible, Terraform, Python"
   tasks:
