@@ -3,4 +3,4 @@
   tasks:
   - name: Fetch varibles from inventory Host
     ansible.builtin.debug:
-      msg: "{{frontend.inventory}} Course is {{ COURSE }}, duration is {{ DURATION }} and the trainer {{ TRAINER }}"
+      msg: "Course is {{ COURSE }}, duration is {{ DURATION }} and the trainer {{ TRAINER }}"
