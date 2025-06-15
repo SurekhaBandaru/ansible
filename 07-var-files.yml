@@ -1,8 +1,8 @@
 - name: variables from files
   hosts: local
   connection: local
-    var_files:
-      - course.yml
+  var_files:
+    - course.yml
   tasks:
   - name: Fetch variables from files
     ansible.builtin.debug:
