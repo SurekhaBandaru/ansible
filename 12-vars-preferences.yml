@@ -3,10 +3,10 @@
   connection: local
   # vars_files:
   #   - course.yml
-  vars_prompt:
-  - name: GREETING
-    prompt: Enter the GREETING prompt
-    private: false
+  # vars_prompt:
+  # - name: GREETING
+  #   prompt: Enter the GREETING prompt
+  #   private: false
   vars:
     GREETING: Greeting from global vars
   tasks:
@@ -19,3 +19,4 @@
       #1. First preference- command
       #2. Second Preference- locals vars i.e.,task vars
       #3. File
+      #4. Prompt
