@@ -1,0 +1,18 @@
+- name: global and local vars
+  hosts: local
+  vars:
+    COURSE: DevSecOps with AWS
+    DURATION: 48 hours
+    TRAINER: Siva M
+  connection: local
+  tasks:
+  - name: Local vars
+    vars:
+      COURSE: Ansible
+    ansible.builtin.debug:
+      msg: "Local vars overcome global vars: The course is {{ COURSE }}, Duration {{ DURATION }} and the trainer is {{ TRAINER }}"
+
+
+  - name: Global vars
+    ansible.builtin.debug:
+      msg: "Global vars: The course is {{ COURSE }}, Duration {{ DURATION }} and the trainer is {{ TRAINER }}"
