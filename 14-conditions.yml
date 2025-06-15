@@ -6,7 +6,7 @@
   #   prompt: Enter NUMBER 
   #   private: false
   vars:
-    NUMBER: 20
+    NUMBER: 120
 
   tasks:
   - name: Print if number is less than 100
