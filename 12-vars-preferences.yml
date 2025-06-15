@@ -12,6 +12,6 @@
   tasks:
   - name: Variable preferences
     vars:
-    GREETING: Greeting from local vars
+     GREETING: Greeting from local vars
     ansible.builtin.debug:
       msg: "Message is {{ GREETING }}"
