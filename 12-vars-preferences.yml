@@ -11,7 +11,10 @@
     GREETING: Greeting from global vars
   tasks:
   - name: Variable preferences
-    vars:
-     GREETING: Greeting from local vars
+    # vars:
+    #  GREETING: Greeting from local vars
     ansible.builtin.debug:
       msg: "{{ GREETING }}"
+
+      #1. First preference- command
+      #2. Second Preference- locals vars i.e.,task vars
