@@ -1,8 +1,8 @@
 - name: variables preferences
   hosts: local
   connection: local
-  vars_files:
-    - course.yml
+  # vars_files:
+  #   - course.yml
   vars_prompt:
   - name: GREETING
     prompt: Enter the GREETING prompt
@@ -18,3 +18,4 @@
 
       #1. First preference- command
       #2. Second Preference- locals vars i.e.,task vars
+      #3. File
