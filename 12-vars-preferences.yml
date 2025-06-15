@@ -4,7 +4,7 @@
   vars_files:
     - course.yml
   vars_prompt:
-  - name: Variable from prompt
+  - name: GREETING
     prompt: Enter the GREETING prompt
     private: false
   vars:
@@ -14,4 +14,4 @@
     vars:
      GREETING: Greeting from local vars
     ansible.builtin.debug:
-      msg: "Message is {{ GREETING }}"
+      msg: "{{ GREETING }}"
