@@ -1,7 +1,7 @@
 - name: loops in ansible
   hosts: local
   connection: local
-  taks:
+  tasks:
    - name: print names in a loops
      ansible.builtin.debug:
       msg: "{{ item }}" # item is a reserved word in ansible iterate over a loop
