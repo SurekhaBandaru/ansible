@@ -1,0 +1,7 @@
+- name: functions in ansible
+  hosts: local
+  connection: local
+  tasks:
+  - name: functions
+    ansible.builtin.debug:
+     msg: "{{ employee }}"
