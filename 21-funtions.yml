@@ -6,11 +6,11 @@
   tasks:
   - name: print person
     ansible.builtin.debug:
-      msg: "{{ person | default('Kavitha') }}"
+      msg: "{{ persons | default('Kavitha') }}"
 
   - name: split by hyphen
     ansible.builtin.debug:
-      msg: "{{ person | split(',') }}"
+      msg: "{{ persons | split(',') }}"
 
   - name: convert map to list
     vars:
