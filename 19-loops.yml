@@ -1,0 +1,12 @@
+- name: loops in ansible
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: install/uninstall service
+    ansible.builtin.package:
+      name: "item.name"
+      state: "item.state"
+    loop:
+     - {'nginx', 'absent'}
+     - {'zip', 'installed'}
+     - {'mysql', 'absent'}
