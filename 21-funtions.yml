@@ -1,0 +1,13 @@
+- name: functions- filters
+  hosts: local
+  connection: local
+  vars:
+    persons: "kamala, hasini, Vignesh, Vineeth, Raham"
+  tasks:
+  - name: print person
+    ansible.builtin.debug:
+      msg: "{{ person | default('Kavitha') }}"
+
+  - name: split by -
+    ansible.builtin.debug:
+      msg: "{{ person | split('-') }}"
