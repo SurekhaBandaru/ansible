@@ -1,5 +1,6 @@
 - name: loops in ansible
   hosts: frontend
+  become: yes
   tasks:
   - name: loops
     ansible.builtin.package:
