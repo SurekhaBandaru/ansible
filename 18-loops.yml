@@ -1,0 +1,9 @@
+- name: loops in ansible
+  hosts: frontend
+  tasks:
+  - name: loops
+    ansible.builtin.package:
+      msg: {{ item }}
+    loop:
+     - nginx
+     - mysql
