@@ -2,14 +2,14 @@
   hosts: frontend
   become: yes
   tasks:
-    - name: install nginx when redhat
-      ansible.builtin.dnf:
-        name: nginx
-        state: present
-      when: ansible_os_family == "RedHat"
+   - name: install nginx when redhat
+     ansible.builtin.dnf:
+      name: nginx
+      state: present
+     when: ansible_os_family == "RedHat"
   
-    - name: install nginx when debian
-      ansible.builtin.apt:
-        name: nginx
-        state: present
-      when: ansible_os_family == "Debian"
+   - name: install nginx when debian
+     ansible.builtin.apt:
+      name: nginx
+      state: present
+     when: ansible_os_family == "Debian"
