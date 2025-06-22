@@ -3,7 +3,8 @@
   tasks:
   - name: loops
     ansible.builtin.package:
-      msg: "{{ item }}"
+      name: "{{ item }}"
+      state: installed
     loop:
      - nginx
      - mysql
