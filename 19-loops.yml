@@ -4,8 +4,8 @@
   tasks:
   - name: install/uninstall service
     ansible.builtin.package:
-      name: "item.name"
-      state: "item.state"
+      name: " {{ item.name }}"
+      state: " {{ item.state }}"
     loop:
      - {name: 'nginx', state: 'absent'}
      - {name: 'zip', state: 'present'}
