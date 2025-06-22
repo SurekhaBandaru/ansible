@@ -8,6 +8,42 @@
     ansible.builtin.debug:
       msg: "{{ person | default('Kavitha') }}"
 
-  - name: split by -
+  - name: split by hyphen
     ansible.builtin.debug:
       msg: "{{ person | split('-') }}"
+
+  - name: convert map to list
+    vars:
+      course:
+        name: devops with aws
+        duration: 10HR
+        trainer: Siva
+    ansible.builtin.debug:
+      msg: "{{ course | dict2items }}"
+
+  - name: convert list to map
+    vars:
+      course:
+      - {'key': 'name', 'value': 'Devops with aws'}
+      - {'key': 'duration', 'value': '10HR'}
+      - {'key': 'trainer', 'value': 'Siva'}
+    ansible.builtin.debug:
+      msg: "List to map {{ course | items2dict }}"
+
+  - name: convert to upper case
+    vars:
+      name: "Amukthamalyada"
+    ansible.builtin.debug:
+      msg: "{{ name | upper }}"
+  
+  - name: convert to lower case
+    vars:
+      name: "DESA BASHALANDU TELUGU lessa"
+    ansible.builtin.debug:
+      msg: "{{ name | lower }}"
+
+  - name: is ip valid
+    vars:
+      ip: "265.56.098.345"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr}}"
