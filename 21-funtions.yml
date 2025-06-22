@@ -10,7 +10,7 @@
 
   - name: split by hyphen
     ansible.builtin.debug:
-      msg: "{{ person | split('-') }}"
+      msg: "{{ person | split(',') }}"
 
   - name: convert map to list
     vars:
